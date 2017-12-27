@@ -1,0 +1,27 @@
+.car {
+  display: block;
+  width: 24%;
+  padding: 10px;
+  border: 1px dotted #ddd;
+  text-align: center;
+  text-decoration: none;
+  color: #2e76da;
+  border-radius: 4px;
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.car .image {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.car:nth-child(4n) {
+  margin-right: 0;
+}
+
+.car:nth-child(4n+1) {
+  clear: left;
+}
