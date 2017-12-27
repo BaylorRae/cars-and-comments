@@ -1,0 +1,43 @@
+.car-info,
+.comment-section {
+  padding: 10px;
+}
+
+.car-info {
+  width: 75%;
+  float: left;
+}
+
+.comment-section {
+  width: 25%;
+  float: right;
+}
+
+.image {
+  display: block;
+  width: 100%;
+}
+
+.comments-title {
+  margin-bottom: 0;
+}
+
+.comments {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comment {
+  border-bottom: 1px dotted #ddd;
+  padding: 10px;
+}
+
+.comment:last-child {
+  border-bottom: 0;
+}
+
+.comment .body {
+  margin: 0 0 5px;
+  font-family: Georgia, serif;
+}
