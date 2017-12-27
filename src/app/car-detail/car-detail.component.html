@@ -1,23 +1,26 @@
-<h2 class="title">
-  Sabine - 1967 VW Beetle
-</h2>
+<p *ngIf="loading">
+  Loading...
+</p>
 
-<div class="car-info">
-  <img class="image" src="https://pixabay.com/get/eb30b7092bf5023ed95c4518b74b4394e371e3d504b0144091f3c97da6edb4_640.jpg" />
-</div>
+<div *ngIf="!loading">
 
-<div class="comment-section">
-  <h3 class="comments-title">Comments</h3>
+  <h2 class="title">
+    {{car.name}} - {{car.year}} {{car.make}} {{car.model}}
+  </h2>
 
-  <ol class="comments">
-    <li class="comment">
-      <p class="body">Wow, what an awesome car!</p>
-      <span class="author">Bob Wiley</span>
-    </li>
+  <div class="car-info">
+    <img class="image" [src]="car.imageUrl" />
+  </div>
 
-    <li class="comment">
-      <p class="body">Cool find</p>
-      <span class="author">Leo Marvin</span>
-    </li>
-  </ol>
+  <div class="comment-section">
+    <h3 class="comments-title">Comments</h3>
+
+    <ol class="comments">
+      <li class="comment" *ngFor="let comment of comments">
+        <p class="body">{{comment.body}}</p>
+        <span class="author">{{comment.author}}</span>
+      </li>
+    </ol>
+  </div>
+
 </div>
